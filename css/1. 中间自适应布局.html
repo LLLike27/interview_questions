@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .h200 {
+        height: 200px;
+      }
+      .bg-blue {
+        background-color: rgb(143, 203, 255);
+      }
+      .bg-grey {
+        background-color: rgb(226, 226, 226);
+      }
+      .absolute {
+        position: absolute;
+      }
+    </style>
+  </head>
+  <body>
+    <h3>实现方式：float</h3>
+    <div style="height: 200px">
+      <div class="bg-grey" style="float: left; width: 200px; height: 100%">
+        左侧
+      </div>
+      <div class="bg-grey" style="float: right; width: 200px; height: 100%">
+        右侧
+      </div>
+      <div class="bg-blue" style="height: 100%">中间的内容</div>
+    </div>
+    <h3>实现方式2：绝对定位</h3>
+    <div class="h200" style="position: relative">
+      <div class="bg-grey h200 absolute" style="left: 0; width: 200px"></div>
+      <div
+        class="h200 bg-blue absolute"
+        style="left: 200px; right: 200px; top: 0; bottom: 0"
+      ></div>
+      <div class="bg-grey h200 absolute" style="right: 0; width: 200px"></div>
+    </div>
+    <h3>实现方式3：flex</h3>
+    <div class="h200" style="display: flex">
+      <div class="bg-grey" style="width: 200px"></div>
+      <div class="bg-blue" style="flex: 1"></div>
+      <div class="bg-grey" style="width: 200px"></div>
+    </div>
+  </body>
+</html>
